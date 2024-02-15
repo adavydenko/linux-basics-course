@@ -50,7 +50,7 @@ In this section, we look at the boot process in a simplied manner by dividing it
  - Once of the key advantages of using **`systemd`** over **`system V(five) init`**  is that it reduces the system startup time by parallelizing the startup of services.
  
  To check the **`init`** system used run **`ls -l /sbin/init`**, if it is systemd then you will see a pointer to **`/lib/systemd/systemd`**
- ```
- $ ls -l /sbin/init
- ```
+```shell
+$ ls -l /sbin/init
+```
  

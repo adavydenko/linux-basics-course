@@ -1,6 +1,6 @@
-# Working with the shell - I
+# Работа с командной строкой - I
 
-### Introduction to Shell
+## Introduction to Shell
 
 - Take me to the [Video Tutorial](https://kodekloud.com/topic/introduction-to-shell/)
 
@@ -9,7 +9,7 @@ In this section, we will take a look at linux shell in detail.
 - We will also see different ways to get help with linux commands. 
 - Finally, we will learn about different types of shells used in Linux (particulary focusing on the bash shell)
 
-#### Linux shell
+### Linux shell
 
 ![Shell](../../images/Shell.PNG)
 
@@ -21,7 +21,7 @@ In this section, we will take a look at linux shell in detail.
   - Linux shell is a program that allows text based interaction between the user and the operating system, this interaction is carried out by typing commands into the interface and receving the response in the same way.
   - The Linux shell is a powerful tool with which you can navigate between different locations within the system, however when you login to the shell the very first directory you were take into is your home directory.
 
-#### The Home Directory
+### The Home Directory
 
 ![The-Home-Directory](../../images/The_Home_Directory.JPG)
  
@@ -37,38 +37,38 @@ In this section, we will take a look at linux shell in detail.
 
 **Note** : The representation of the home directory is represented as by the `~ (tilde symbol).`
 
-#### Command Prompt
+### Command Prompt
 
 - You can configure the command prompt to show whatever you want, such as the **`hostname`** , **`date`** or **`time`**. 
 - It is currently configured to show the current working directory. The **`~` symbol**  here represents the home directory
 
-#### Command and Arguments
+### Command and Arguments
 
 - To interact with the linux system using the shell, a user has to type in commands
 - When a command is run it executes a program to achieve a specific task.
   - **`For example`**: The **`echo`** command is used to print a line of text on the screen.
-  ```
-                          $ echo 
-  ```
+ ```shell
+$ echo 
+ ```
 - An argument acts as an input to command
   - **`For example`**: To print a **`hello`** message type **`echo hello`** command.
-  ```
-                          $ echo hello
-  ```
+```shell
+$ echo hello
+```
 - There are several commands that can work without an argument too.
   - **`For example`**: Type in the command called **`uptime`**, this is used to print information about how long a system has been running for since the last reboot along with the other information (This command doesn't need an argument)
-  ```
-                          $ uptime 
-  ```
+```shell
+$ uptime 
+```
 - A command can also have options that modify its behaviour in some predetermine way. The option also sometime referred to as a switch or a flag 
   - **`For example`**: To print a same word `hello` but without a trailing line, use **`echo`** command with **`-n`** flag.
-  ```
-                          $ echo -n hello
-  ```
+```shell
+$ echo -n hello
+```
   
 ![Command-and-Arguments](../../images/Command-and-Arguments.PNG)
 
-#### Command Types
+### Command Types
 
 Command types in linux can be generally categorized in two types
  1. Internal or Built-in Commands 

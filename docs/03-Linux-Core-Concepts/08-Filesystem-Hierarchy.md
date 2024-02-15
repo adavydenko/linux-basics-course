@@ -1,26 +1,38 @@
-# Filesystem Hierarchy
+#  Иерархия файловой системы
 
 - Take me to the [Video Tutorial](https://kodekloud.com/topic/filesystem-hierarchy/)
 
-In this section, lets take a look at the **`filesystem hierarchy`**
-- Linux uses  single rooted, inverted tree like file system
-  - **`/home`**  : It is the location that contains the home directories for all users, except the **`root`** user (root user home directory is located at **`/root`**)
-  - **`/opt`**   : If you want to install any third party programs put them in the **`/opt`** filesystem.
-  - **`/mnt`**   : It is the default mount point for any partition and it is empty by default. It is used to mount filesystems temporarly in the system
-  - **`/tmp`**   : It is used to store temporary data
-  - **`/media`** : All external media is mounted on **`/media`**
-  - **`/dev`**   : Contains the special block and character device files
-  - **`/bin`**   : The basic programs such as binaries **`cp`**, **`mv`**, **`mkdir`** are located in the **`/bin`** directory
-  - **`/etc`**   : It stores most of the configuration files in Linux.
-  - **`/lib`**   : The directory **`/lib`** and **`/lib64`** is the place to look for shared libraries to be imported into your program
-  - **`/usr`**   : In older systems, **`/usr`** directory is used for **`User Home Directories`**, however in the modern linux operating systems it is the location where all user land applciations in their data reside
-  - **`/var`**   : It contains variable data like mails, log files
+В этос разделе разберем  **`иерархию файловой системы`**
+- Linux использует однокорневую, перевернутую (от корня к листьм) древовидную файловую систему
+  - **`/home`**  : Это расположение, содержащее домашние каталоги для всех пользователей, за исключением пользователя **`root`** (домашний каталог пользователя root находится по адресу **`/root`**).
+  - **`/opt`**   : Если вы хотите установить какие-либо сторонние программы, поместите их в директорию **`/opt`** .
+  - **`/mnt`**   : Это точка монтирования по-умолчанию для любого раздела и по-умолчанию она пуста. Используется для временного монтирования файловых систем в системе.
+  - **`/tmp`**   : Используется для хранения временных данных
+  - **`/media`** : Все внешние носители монтируются в папку **`/media`**
+  - **`/dev`**   : Содержит специальные блочные и символьные файлы устройств (special block and character device files)
+  - **`/bin`**   : Базовые программы, такие как бинарные файлы **`cp`**, **`mv`**, **`mkdir`** расположены в директории **`/bin`**
+  - **`/etc`**   : В нем хранится большинство конфигурационных файлов в Linux.
+  - **`/lib`**   : Директории **`/lib`** и **`/lib64`** – месторасположение для общедоступных (shared) библиотек, которые импортируются в ваши программы
+  - **`/usr`**   : В старых системах каталог **`/usr`** используется для  **`Домашних каталогов пользователей`**, однако в современных операционных системах linux, это директория в которой находятся все пользовательские приложения и их данные
+  - **`/var`**   : Содержит переменные данные, такие как: почтовые файлы, файлы логов и т.д.
   
       ![filesystem](../../images/filesystem.PNG)
       
- To print all the mounted filesystems, run **`df`** (disk filesystem) command
- ```
- $ df -hP
+ Чтобы вывести все примонтированные файловые системы, выполните команду **`df`** (df == disk filesystem):
+ ```shell
+$ df -hP
+Filesystem     512-blocks      Used Available Capacity  Mounted on
+/dev/disk3s1s1  478724992  19179672  33268136    37%    /
+devfs                 422       422         0   100%    /dev
+/dev/disk3s6    478724992  14682512  33268136    31%    /System/Volumes/VM
+/dev/disk3s2    478724992  11068080  33268136    25%    /System/Volumes/Preboot
+/dev/disk3s4    478724992    283816  33268136     1%    /System/Volumes/Update
+/dev/disk1s2      1024000     12328    988720     2%    /System/Volumes/xarts
+/dev/disk1s1      1024000     12488    988720     2%    /System/Volumes/iSCPreboot
+/dev/disk1s3      1024000       744    988720     1%    /System/Volumes/Hardware
+/dev/disk3s5    478724992 398243696  33268136    93%    /System/Volumes/Data
+map auto\_home           0         0         0   100%    /System/Volumes/Data/home
+/dev/disk5s1      8069120   7585864    451256    95%  /Library/Developer/CoreSimulator/Volumes/watchOS\_20S75
  ```
  
  
