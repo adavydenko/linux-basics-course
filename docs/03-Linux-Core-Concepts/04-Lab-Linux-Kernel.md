@@ -10,10 +10,10 @@ $ uname -r
 
 what is the kernel version in 4.15.0-88-generic?
 ```shell
-# Look for the first digit. In this case, it is 23
+# Look for the first digit. In this case, it is 4
 ```
 
-What is the major version number of the kernel 4.15.0-88-generic
+What is the minor version number of the kernel 4.15.0-88-generic
 ```shell
 # Look for the second digit after the kernel version separated by a . In this case, it is 15
 ```
@@ -39,10 +39,7 @@ $ lscpu
 To check total online memory
 ```shell
 # Run the lsmem command and look for the value of online memory
-$ c
+$ lsmem
 ```
-
-
-
 
 
