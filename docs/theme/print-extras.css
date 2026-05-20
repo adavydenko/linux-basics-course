@@ -1,11 +1,383 @@
+/* =====================================================================
+   Оформление пособия.
+
+   Файл состоит из двух частей:
+     1. ОБЩИЕ ВИЗУАЛЬНЫЕ СТИЛИ — работают и на экране (веб), и в печати:
+        вид титульного листа, оборота, оглавления, шмуцтитулов, врезок.
+     2. ТОЛЬКО ДЛЯ ПЕЧАТИ (@media print) — механика бумажной вёрстки:
+        поля, колонтитулы, нумерация страниц, разрывы, @page, нумерация
+        в оглавлении и глоссарии через target-counter.
+   ===================================================================== */
+
+
+/* =====================================================================
+   1. ОБЩИЕ ВИЗУАЛЬНЫЕ СТИЛИ (экран + печать)
+   ===================================================================== */
+
+/* ---------- Титульный лист ---------- */
+
+.titlepage {
+  text-align: center;
+  padding: 24mm 10mm 10mm;
+}
+.titlepage .subject {
+  font-size: 12pt;
+  color: #6a6a6a;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14mm;
+}
+.titlepage h1 {
+  font-size: 34pt;
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 0 0 7mm 0;
+  border: none;
+  padding: 0;
+}
+.titlepage .subtitle {
+  font-size: 15pt;
+  line-height: 1.4;
+  color: #333;
+  max-width: 130mm;
+  margin: 0 auto 26mm;
+}
+.titlepage .author {
+  font-size: 14pt;
+  margin: 4mm 0 0;
+}
+.titlepage .institution {
+  font-size: 12pt;
+  color: #555;
+  margin: 14mm 0 4mm;
+}
+.titlepage .year {
+  margin-top: 26mm;
+  font-size: 12pt;
+  color: #555;
+}
+
+/* ---------- Оборот титула / выходные данные ---------- */
+
+.imprint {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  max-width: 150mm;
+}
+.imprint h1 {
+  display: none;
+}
+.imprint .udk {
+  margin-bottom: 1.2em;
+  font-size: 10.5pt;
+  color: #333;
+}
+.imprint .ann-title {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+}
+.imprint .copyright {
+  margin-top: 4em;
+  font-size: 10pt;
+  color: #444;
+}
+
+/* ---------- Печатное оглавление ---------- */
+
+.toc h1 {
+  font-size: 24pt;
+  margin-bottom: 0.8em;
+}
+.toc ul, .toc ol {
+  list-style: none;
+  padding-left: 0;
+}
+.toc li {
+  margin: 0.2em 0;
+}
+.toc a {
+  color: #111;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+}
+.toc .toc-line {
+  flex: 1;
+  border-bottom: 1px dotted #bbb;
+  margin: 0 0.4em;
+  transform: translateY(-3px);
+}
+.toc .lvl-1 { font-weight: 700; margin-top: 0.7em; }
+.toc .lvl-2 { padding-left: 1.2em; font-size: 10.5pt; }
+.toc .lvl-3 { padding-left: 2.4em; font-size: 10pt; color: #555; }
+
+/* ---------- Маршрутная карта ---------- */
+
+.roadmap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5pt;
+  margin-top: 1em;
+}
+.roadmap th, .roadmap td {
+  border: 1px solid #ccc;
+  padding: 6pt 8pt;
+  vertical-align: top;
+  text-align: left;
+}
+.roadmap th {
+  background: #eef1f6;
+  font-weight: 700;
+}
+
+/* ---------- Шмуцтитулы частей ---------- */
+
+.part-divider {
+  text-align: center;
+  padding: 40mm 10mm;
+}
+.part-divider .part-number {
+  font-size: 15pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-bottom: 12mm;
+}
+.part-divider h1 {
+  font-size: 32pt;
+  font-weight: 800;
+  margin: 0 0 10mm 0;
+  border: none;
+}
+.part-divider .part-intro {
+  font-size: 12.5pt;
+  text-align: left;
+  margin: 16mm auto 0;
+  max-width: 130mm;
+  line-height: 1.55;
+  color: #333;
+}
+
+/* ---------- Истории-связки (врезка) ---------- */
+
+.story-bridge {
+  margin: 1.2em 0 1.6em;
+  padding: 0.9em 1.1em;
+  background: #f6f7f9;
+  border-left: 4px solid #888;
+  border-radius: 4px;
+  font-size: 10.8pt;
+}
+.story-bridge h1,
+.story-bridge h2 {
+  font-size: 13pt;
+  margin: 0 0 0.4em 0;
+  border: none;
+}
+.story-bridge h1::before {
+  content: "История · ";
+  color: #888;
+  font-weight: normal;
+}
+
+/* ---------- Источники с нумерацией [1]…[n] ---------- */
+
+.bibliography ol {
+  padding-left: 2em;
+}
+.bibliography li {
+  margin: 0.3em 0;
+}
+
+
+/* =====================================================================
+   2. ТОЛЬКО ДЛЯ ПЕЧАТИ — механика бумажной вёрстки
+   ===================================================================== */
+
 @media print {
-  .chapter {
-    break-after: auto;
+  /* ---------- 2.1 Поля страницы, колонтитулы, нумерация ---------- */
+
+  @page {
+    size: A4;
+    margin: 22mm 18mm 22mm 22mm;
+
+    @top-left {
+      content: string(part-title);
+      font-family: "Open Sans", sans-serif;
+      font-size: 9pt;
+      color: #666;
+    }
+    @top-right {
+      content: string(chapter-title);
+      font-family: "Open Sans", sans-serif;
+      font-size: 9pt;
+      color: #666;
+      font-style: italic;
+    }
+    @bottom-right {
+      content: counter(page);
+      font-family: "Open Sans", sans-serif;
+      font-size: 10pt;
+      color: #333;
+    }
+    @bottom-left {
+      content: "Основы Linux";
+      font-family: "Open Sans", sans-serif;
+      font-size: 9pt;
+      color: #999;
+    }
+  }
+
+  /* Левая (чётная) страница — нумерация и текст зеркально */
+  @page :left {
+    margin: 22mm 22mm 22mm 18mm;
+    @top-left {
+      content: string(chapter-title);
+      font-style: italic;
+    }
+    @top-right {
+      content: string(part-title);
+      font-style: normal;
+    }
+    @bottom-left {
+      content: counter(page);
+      font-family: "Open Sans", sans-serif;
+      font-size: 10pt;
+      color: #333;
+    }
+    @bottom-right {
+      content: "Основы Linux";
+      font-family: "Open Sans", sans-serif;
+      font-size: 9pt;
+      color: #999;
+    }
+  }
+
+  /* Первая страница (обложка) — без колонтитулов и нумерации.
+     Используем :first вместо именованной страницы: именованные страницы
+     заставляют WeasyPrint вставлять лишний разрыв поверх разрыва mdBook,
+     из-за чего появлялись пустые полосы перед титулом и оборотом. */
+  @page :first {
+    margin: 30mm 25mm;
+    @top-left { content: ""; }
+    @top-right { content: ""; }
+    @bottom-left { content: ""; }
+    @bottom-right { content: ""; }
+  }
+
+  /* ---------- 2.2 Отступы титульных страниц ---------- */
+
+  .titlepage   { padding-top: 30mm; }
+  .part-divider { padding-top: 60mm; }
+
+  /* ---------- 2.3 Связать заголовки с колонтитулами ---------- */
+
+  main h1 {
+    string-set: chapter-title content();
+  }
+  .titlepage h1 {
+    string-set: none;
+  }
+  .part-divider h1 {
+    string-set: part-title content(), chapter-title "";
+  }
+  .toc h1 {
+    string-set: chapter-title "Оглавление";
+  }
+  .roadmap h1 {
+    string-set: chapter-title "Как устроен курс";
+  }
+
+  /* ---------- 2.4 Скрыть веб-навигацию "English | Русский" ---------- */
+
+  main > div[style*="break-before: page"] + p:has(> a):has(> strong) {
+    display: none !important;
+  }
+  main > p:first-child:has(> a):has(> strong) {
+    display: none !important;
+  }
+  /* Резерв на случай, если :has() недоступен — класс ставится
+     постпроцессором print.html (см. scripts/postprocess-print-html.py) */
+  .lang-switcher {
+    display: none !important;
+  }
+
+  /* ---------- 2.5 Управление разрывами страниц ---------- */
+
+  /* ВАЖНО: mdBook сам вставляет <div style="break-before: page"> перед
+     каждой главой. Поэтому НЕ добавляем break-before к h1 — иначе перед
+     каждой главой получаются двойные разрывы и пустые страницы. */
+  h1, h2, h3, h4 {
+    break-after: avoid;
   }
 
   pre,
   blockquote,
-  table {
+  table,
+  figure {
     break-inside: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2 + ul, h2 + ol {
+    break-inside: avoid;
+  }
+
+  .story-bridge {
+    break-before: auto;
+    break-after: avoid;
+  }
+  .story-bridge h1,
+  .story-bridge h2 {
+    break-before: auto;
+  }
+
+  /* ---------- 2.6 Нумерация страниц в оглавлении ---------- */
+
+  .toc a::after {
+    content: target-counter(attr(href), page);
+    margin-left: 0.4em;
+    color: #666;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- 2.7 Глоссарий: страничные ссылки ---------- */
+
+  .glossary a.term-page::after {
+    content: " (с. " target-counter(attr(href), page) ")";
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  /* ---------- 2.8 Прочая чистка для печати ---------- */
+
+  .menu-bar, .nav-chapters, .mobile-nav-chapters,
+  .nav-wrapper, .nav-wide-wrapper,
+  #mdbook-help-container, #mdbook-help-popup,
+  .sidebar, .menu-title,
+  a.header span, .hide-boring,
+  .copy-button, .clip-button {
+    display: none !important;
+  }
+
+  /* Длинные строки кода — переносить */
+  pre code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Цвет ссылок в основном тексте — гасим, чтобы не «синел» весь PDF */
+  main a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .toc a, a.external {
+    color: #1a5a9a;
   }
 }
