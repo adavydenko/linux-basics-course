@@ -1,7 +1,7 @@
 [English](06-Lab-DPKG-AND-APT.md) | **Русский**
 # Лабораторная работа: DPKG и APT
 
-- Перейти к [лабораторной работе](https://kodekloud.com/topic/lab-dpkg-and-apt-2/)
+- [Доп. лабораторная](https://kodekloud.com/topic/lab-dpkg-and-apt-2/)
 
 ## Цели лабораторной работы
 
@@ -15,43 +15,47 @@
 
 ## Задания
 
-1. Ответить, какие пакетные менеджеры используются в Debian-based дистрибутивах:
+Эта работа — зеркало лабораторной по RPM и YUM, только для Debian-семейства. Вы снова пройдёте знакомый маршрут: определитесь с инструментами, столкнётесь с ограничением низкоуровневого `dpkg` и решите проблему через `apt`, а заодно потренируетесь искать пакет по описанию.
+
+1. Определите, какие пакетные менеджеры используются в Debian-based дистрибутивах:
 
    ```text
    Debian-based дистрибутивы используют dpkg и apt.
    ```
 
-2. Установить пакет браузера `firefox`, скачанный в `/root/firefox.deb`. Зависимости могут не установиться автоматически:
+2. Установите браузер `firefox` из `.deb`-файла, скачанного в `/root/firefox.deb`. Как и `rpm`, `dpkg` не разрешает зависимости, поэтому часть из них может не установиться:
 
    ```shell
    $ sudo dpkg -i /root/firefox.deb
    ```
 
-3. Установить пакет через `APT`:
+3. Установите тот же пакет через `apt` — он сам доставит недостающие зависимости:
 
    ```shell
    $ sudo apt install firefox
    ```
 
-4. Найти пакет для установки браузера Chromium. Используйте `apt search`; описание пакета: Chromium web browser, open-source version of Chrome.
+4. Теперь найдите пакет для браузера Chromium. Точное имя неизвестно — известно только описание: «Chromium web browser, open-source version of Chrome». Поиск по репозиторию делает `apt search` — ему достаточно фрагмента имени или описания. `2>/dev/null` подавляет служебное предупреждение «WARNING: apt does not have a stable CLI interface»:
 
    ```shell
-   $ sudo apt search chromium-browser
+   $ apt search chromium 2>/dev/null
    ```
 
-5. Установить `chromium-browser`:
+5. Установите найденный `chromium-browser`. Флаг `-y` сразу подтверждает установку:
 
    ```shell
    $ sudo apt install -y chromium-browser
    ```
 
-6. Удалить браузер `firefox`:
+6. Удалите браузер `firefox` — зеркальная операция к установке:
 
    ```shell
    $ sudo apt remove firefox
    ```
 
 ## Что нужно сдать
+
+Оформите отчёт по [единому формату](../00-Lab-Environment/01-Lab-Environment-Setup.ru.md#формат-отчёта-по-лабораторной-работе). Дополнительно для этой работы приложите:
 
 - Команды установки через `dpkg` и `apt`.
 - Результат поиска Chromium через `apt search`.
