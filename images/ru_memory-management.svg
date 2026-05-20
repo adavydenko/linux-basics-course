@@ -1,0 +1,35 @@
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="360" fill="#FFFFFF"/>
+
+  <text x="360" y="46" font-size="22" font-weight="700" fill="#1A2B3C" text-anchor="middle">Память Linux<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   разделена на два пространства</tspan></text>
+
+  <!-- Корень «Память Linux» -->
+  <rect x="300" y="82" width="120" height="44" rx="10" fill="#2E9E8F"/>
+  <text x="360" y="110" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Память Linux</text>
+
+  <!-- Ветви: от корня к двум пространствам -->
+  <g stroke="#5A6B7B" stroke-width="1.5" fill="none">
+    <path d="M360,128 V148"/>
+    <path d="M200,148 H540"/>
+    <path d="M200,148 V160"/>
+    <path d="M540,148 V160"/>
+  </g>
+
+  <!-- Регион: пространство ядра -->
+  <rect x="40" y="160" width="320" height="180" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="200" y="190" font-size="16" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Пространство ядра (kernel space)</text>
+
+  <rect x="80" y="210" width="240" height="44" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="200" y="238" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Ядро</text>
+
+  <rect x="80" y="270" width="240" height="44" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="200" y="298" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Драйверы устройств</text>
+
+  <!-- Регион: пространство пользователя -->
+  <rect x="380" y="160" width="320" height="180" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="540" y="190" font-size="16" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Пространство пользователя (user space)</text>
+
+  <rect x="420" y="230" width="240" height="92" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="540" y="265" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Приложения и программы</text>
+  <text x="540" y="292" font-size="12" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#9AA3AD" text-anchor="middle">C, Java, Python, Docker</text>
+</svg>

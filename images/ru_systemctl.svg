@@ -1,0 +1,58 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="380" fill="#FFFFFF"/>
+
+  <text x="360" y="40" font-size="22" font-weight="700" fill="#1A2B3C" text-anchor="middle">systemctl<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   четыре круга задач</tspan></text>
+
+  <!-- Корневой узел systemctl -->
+  <rect x="290" y="70" width="140" height="48" rx="10" fill="#2E9E8F"/>
+  <text x="360" y="100" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">systemctl</text>
+
+  <!-- Линии-ветви к четырём картам -->
+  <g stroke="#8A97A3" stroke-width="1.6" fill="none">
+    <path d="M 330 118 L 330 150 L 150 150 L 150 180"/>
+    <path d="M 350 118 L 350 150 L 295 150 L 295 180"/>
+    <path d="M 370 118 L 370 150 L 425 150 L 425 180"/>
+    <path d="M 390 118 L 390 150 L 570 150 L 570 180"/>
+  </g>
+
+  <!-- Карточка 1: Жизненный цикл -->
+  <rect x="50" y="180" width="200" height="160" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+  <text x="150" y="206" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Жизненный цикл</text>
+  <text x="150" y="224" font-size="11" fill="#5A6B7B" text-anchor="middle">сейчас, до перезагрузки</text>
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#1A2B3C" text-anchor="middle">
+    <text x="150" y="252">start</text>
+    <text x="150" y="270">stop</text>
+    <text x="150" y="288">restart</text>
+    <text x="150" y="306">reload</text>
+    <text x="150" y="324">status</text>
+  </g>
+
+  <!-- Карточка 2: Автозапуск -->
+  <rect x="260" y="180" width="140" height="160" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+  <text x="330" y="206" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Автозапуск</text>
+  <text x="330" y="224" font-size="11" fill="#5A6B7B" text-anchor="middle">при загрузке</text>
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#1A2B3C" text-anchor="middle">
+    <text x="330" y="258">enable</text>
+    <text x="330" y="276">disable</text>
+  </g>
+
+  <!-- Карточка 3: Юниты -->
+  <rect x="410" y="180" width="130" height="160" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+  <text x="475" y="206" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Юниты</text>
+  <text x="475" y="224" font-size="11" fill="#5A6B7B" text-anchor="middle">обзор служб</text>
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" fill="#1A2B3C" text-anchor="middle">
+    <text x="475" y="252">list-units</text>
+    <text x="475" y="270">cat</text>
+    <text x="475" y="288">edit</text>
+    <text x="475" y="306">daemon-reload</text>
+  </g>
+
+  <!-- Карточка 4: Цели загрузки -->
+  <rect x="550" y="180" width="140" height="160" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+  <text x="620" y="206" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Цели загрузки</text>
+  <text x="620" y="224" font-size="11" fill="#5A6B7B" text-anchor="middle">режимы (targets)</text>
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" fill="#1A2B3C" text-anchor="middle">
+    <text x="620" y="252">get-default</text>
+    <text x="620" y="270">set-default</text>
+  </g>
+</svg>

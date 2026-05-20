@@ -1,0 +1,32 @@
+<svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="240" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-size="22" font-weight="700" fill="#1A2B3C">Перевод прав в число<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   r = 4 · w = 2 · x = 1</tspan></text>
+
+  <!-- 4 примера тройки прав -->
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" text-anchor="middle">
+    <!-- rwx → 7 -->
+    <rect x="60" y="90" width="120" height="50" rx="10" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+    <text x="120" y="124" font-size="26" font-weight="bold" fill="#1A2B3C">rwx</text>
+    <text x="120" y="166" font-size="14" fill="#5A6B7B">4 + 2 + 1</text>
+    <text x="120" y="206" font-size="32" font-weight="bold" fill="#2E9E8F">7</text>
+
+    <!-- rw- → 6 -->
+    <rect x="220" y="90" width="120" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+    <text x="280" y="124" font-size="26" font-weight="bold" fill="#1A2B3C">rw-</text>
+    <text x="280" y="166" font-size="14" fill="#5A6B7B">4 + 2 + 0</text>
+    <text x="280" y="206" font-size="32" font-weight="bold" fill="#1A2B3C">6</text>
+
+    <!-- -wx → 3 -->
+    <rect x="380" y="90" width="120" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+    <text x="440" y="124" font-size="26" font-weight="bold" fill="#1A2B3C">-wx</text>
+    <text x="440" y="166" font-size="14" fill="#5A6B7B">0 + 2 + 1</text>
+    <text x="440" y="206" font-size="32" font-weight="bold" fill="#1A2B3C">3</text>
+
+    <!-- r-x → 5 -->
+    <rect x="540" y="90" width="120" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+    <text x="600" y="124" font-size="26" font-weight="bold" fill="#1A2B3C">r-x</text>
+    <text x="600" y="166" font-size="14" fill="#5A6B7B">4 + 0 + 1</text>
+    <text x="600" y="206" font-size="32" font-weight="bold" fill="#1A2B3C">5</text>
+  </g>
+</svg>

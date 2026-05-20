@@ -1,0 +1,90 @@
+# Summary
+
+- [Настройка окружения для лабораторных работ](00-Lab-Environment/01-Lab-Environment-Setup.ru.md)
+- [Введение](01-Introduction/01-Introduction.ru.md)
+
+# Основной курс
+
+- [Работа с командной строкой, часть I](02-Working-With-Shell-Part-I/01-Introduction-to-Shell.ru.md)
+  - [Базовые команды Linux](02-Working-With-Shell-Part-I/02-Basic-Commands.ru.md)
+  - [Справка в командной строке](02-Working-With-Shell-Part-I/03-Command-Line-Help.ru.md)
+  - [Лабораторная работа: оболочка и базовые команды](02-Working-With-Shell-Part-I/04-lab-working-with-shell.ru.md)
+  - [Оболочка Bash](02-Working-With-Shell-Part-I/05-Bash-Shell.ru.md)
+  - [Лабораторная работа: Bash](02-Working-With-Shell-Part-I/06-Lab-Linux-Bash-Shell.ru.md)
+
+- [Ключевые понятия Linux](<03-Linux-Core-Concepts/01-Bobs-first-team-meeting.ru.md>)
+  - [Ядро Linux](03-Linux-Core-Concepts/02-The-Linux-Kernel.ru.md)
+  - [Работа с оборудованием](03-Linux-Core-Concepts/03-Working-with-hardware.ru.md)
+  - [Лабораторная работа: ядро Linux](03-Linux-Core-Concepts/04-Lab-Linux-Kernel.ru.md)
+  - [Последовательность загрузки Linux](03-Linux-Core-Concepts/05-Linux-Boot-Sequence.ru.md)
+  - [Уровни запуска и targets systemd](03-Linux-Core-Concepts/06-Run-Levels.ru.md)
+  - [Типы файлов в Linux](03-Linux-Core-Concepts/07-File-Types.ru.md)
+  - [Иерархия файловой системы](03-Linux-Core-Concepts/08-Filesystem-Hierarchy.ru.md)
+  - [Лабораторная работа: уровни запуска и файловая система](03-Linux-Core-Concepts/09-Lab-Linux-RunLevels-Filesystem-Hierarchy.ru.md)
+
+- [Управление пакетами](04-Package-Mangement/01-Package-Management-Distribution.ru.md)
+  - [RPM и YUM](04-Package-Mangement/02-RPM-and-YUM.ru.md)
+  - [Лабораторная работа: RPM и YUM](04-Package-Mangement/03-Lab-RPM-and-YUM.ru.md)
+  - [DPKG и APT](04-Package-Mangement/04-DPKG-AND-APT.ru.md)
+  - [APT и APT-GET](04-Package-Mangement/05-APT-vs-APT-GET.ru.md)
+  - [Лабораторная работа: DPKG и APT](04-Package-Mangement/06-Lab-DPKG-AND-APT.ru.md)
+
+- [Работа с командной строкой, часть II](<05-Working-With-Shell-Part-II/01-Behind-Schedule(story).ru.md>)
+  - [Архивация и сжатие файлов](05-Working-With-Shell-Part-II/02-File-Compression-and-Archival.ru.md)
+  - [Поиск файлов и шаблонов](05-Working-With-Shell-Part-II/03-Searching-for-files-and-patterns.ru.md)
+  - [Перенаправление ввода-вывода](05-Working-With-Shell-Part-II/04-IO-Redirection.ru.md)
+  - [Лабораторная работа: командная строка, часть II](05-Working-With-Shell-Part-II/05-Lab-Working-With-Shell-Part-II.ru.md)
+  - [Редактор Vi](05-Working-With-Shell-Part-II/06-Vi-Editor.ru.md)
+  - [Лабораторная работа: Vi](05-Working-With-Shell-Part-II/07-Lab-VI-Editor.ru.md)
+
+- [Безопасность и права доступа](<06-Security-and-File-Permissions/01-The-Security-Incident(story).ru.md>)
+  - [Учётные записи Linux](06-Security-and-File-Permissions/02-Linux-Accounts.ru.md)
+  - [Управление пользователями](06-Security-and-File-Permissions/03-User-Management.ru.md)
+  - [Файлы управления доступом](06-Security-and-File-Permissions/04-Access-Control-Files.ru.md)
+  - [Права доступа к файлам](06-Security-and-File-Permissions/05-File-Permissions.ru.md)
+  - [SSH и SCP](06-Security-and-File-Permissions/06-SSH-and-SCP.ru.md)
+  - [IPtables](06-Security-and-File-Permissions/07-IPtables.ru.md)
+  - [Cron](06-Security-and-File-Permissions/08-Cronjob.ru.md)
+
+- [Сети](<07-Networking/01-The-Network-Issue(story).ru.md>)
+  - [DNS](07-Networking/02-DNS.ru.md)
+  - [Основы сети: коммутация и маршрутизация](07-Networking/03-Networking-Basics.ru.md)
+  - [Диагностика сетевых проблем](07-Networking/04-Troubleshooting.ru.md)
+
+- [Хранилища в Linux](08-Storage-in-Linux/01-Wheres-my-Storage.ru.md)
+  - [Диски и разделы](08-Storage-in-Linux/02-Storage-Basics.ru.md)
+  - [Файловые системы в Linux](08-Storage-in-Linux/03-File-System-in-Linux.ru.md)
+  - [DAS, NAS и SAN](08-Storage-in-Linux/04-DAS-NAS-and-SAN.ru.md)
+  - [LVM](08-Storage-in-Linux/05-LVM.ru.md)
+  - [Статусная встреча проекта](08-Storage-in-Linux/06-Project-Status-Meeting.ru.md)
+
+- [Управление сервисами с systemd](09-Service-management-with-SYSTEMD/01-Working-Overtime-Story.ru.md)
+  - [Создание собственного systemd-сервиса](09-Service-management-with-SYSTEMD/02-Creating-a-SYSTEMD-Service.ru.md)
+  - [Инструменты systemd](09-Service-management-with-SYSTEMD/03-SYSTEMD-Tools.ru.md)
+  - [Таймеры systemd](09-Service-management-with-SYSTEMD/04-SYSTEMD-Timers.ru.md)
+
+- [Демонстрация заказчику](<10-The-Client-Demonstration/01-Client-Demonstration-in-Jeopardy!(story).ru.md>)
+  - [Демонстрационный кейс по диагностике](10-The-Client-Demonstration/02-Troubleshoot-the-Development-Environment.ru.md)
+  - [Финал истории](<10-The-Client-Demonstration/03-Finale(story).ru.md>)
+
+- [Работа с текстовыми данными](11-Text-Processing/01-Text-Processing.ru.md)
+- [Скрипты для оболочки](12-Shell-Scripting/01-Shell-Scripting.ru.md)
+- [Процессы и ресурсы](13-Processes-and-Resources/01-Processes-and-Resources.ru.md)
+- [Удалённая работа](14-Remote-Work/01-Remote-Work.ru.md)
+- [Git из командной строки](15-Git-from-Command-Line/01-Git-from-Command-Line.ru.md)
+- [Python из командной строки](16-Python-from-Command-Line/01-Python-from-Command-Line.ru.md)
+- [Современная сеть в Linux](17-Modern-Networking/01-Modern-Networking.ru.md)
+  - [Постоянная сеть: Netplan и NetworkManager](17-Modern-Networking/02-Netplan.ru.md)
+- [Контейнеры в Linux](18-Linux-Containers/01-Linux-Containers.ru.md)
+- [Диагностика Linux](19-Diagnostics/01-Diagnostics.ru.md)
+- [Итоговый проект](20-Final-Project/01-Final-Project.ru.md)
+
+# Приложения
+
+- [A1. Глоссарий](A1-Glossary/01-Glossary.ru.md)
+- [A2. Источники и рекомендуемая литература](A2-Sources/01-Sources.ru.md)
+- [A3. Банк упражнений](A3-Exercises/01-Exercises.ru.md)
+- [A4. Педагогический аппарат](A4-Pedagogy/01-Pedagogy.ru.md)
+- [A5. Методичка преподавателя](A5-Teacher-Guide/01-Teacher-Guide.ru.md)
+- [A6. Регулярные выражения](A6-Appendix-Regex/01-Regular-Expressions.ru.md)
+- [Шпаргалка по командам Linux](21-Appendix-Cheat-Sheet/01-Command-Cheat-Sheet.ru.md)

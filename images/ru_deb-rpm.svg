@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="800" height="280" fill="#FFFFFF"/>
+
+  <text x="400" y="46" font-size="22" font-weight="700" fill="#1A2B3C" text-anchor="middle">Два семейства пакетов<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   .deb и .rpm</tspan></text>
+
+  <!-- Левый регион: .deb -->
+  <rect x="40" y="90" width="350" height="160" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <rect x="155" y="105" width="120" height="42" rx="10" fill="#2E9E8F"/>
+  <text x="215" y="132" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">.deb</text>
+
+  <g stroke="#8A97A3" stroke-width="1.5" stroke-dasharray="4 3" fill="none">
+    <line x1="215" y1="147" x2="215" y2="170"/>
+    <line x1="100" y1="170" x2="330" y2="170"/>
+    <line x1="100" y1="170" x2="100" y2="195"/>
+    <line x1="215" y1="170" x2="215" y2="195"/>
+    <line x1="330" y1="170" x2="330" y2="195"/>
+  </g>
+
+  <rect x="60" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="100" y="220" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Ubuntu</text>
+  <rect x="175" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="215" y="220" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Debian</text>
+  <rect x="290" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="330" y="219" font-size="12" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Linux Mint</text>
+
+  <!-- Правый регион: .rpm -->
+  <rect x="410" y="90" width="350" height="160" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <rect x="525" y="105" width="120" height="42" rx="10" fill="#2E9E8F"/>
+  <text x="585" y="132" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">.rpm</text>
+
+  <g stroke="#8A97A3" stroke-width="1.5" stroke-dasharray="4 3" fill="none">
+    <line x1="585" y1="147" x2="585" y2="170"/>
+    <line x1="470" y1="170" x2="700" y2="170"/>
+    <line x1="470" y1="170" x2="470" y2="195"/>
+    <line x1="585" y1="170" x2="585" y2="195"/>
+    <line x1="700" y1="170" x2="700" y2="195"/>
+  </g>
+
+  <rect x="430" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="470" y="220" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">RHEL</text>
+  <rect x="545" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="585" y="220" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">CentOS</text>
+  <rect x="660" y="195" width="80" height="40" rx="8" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="700" y="220" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Fedora</text>
+</svg>

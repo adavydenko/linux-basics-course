@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="760" height="400" fill="#FFFFFF"/>
+  <defs>
+    <marker id="viA" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#5A6B7B"/></marker>
+  </defs>
+
+  <text x="380" y="40" font-size="22" font-weight="700" fill="#1A2B3C" text-anchor="middle">Режимы редактора vi<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   переключение между ними</tspan></text>
+
+  <!-- Терминальная команда входа -->
+  <rect x="30" y="130" width="180" height="44" rx="8" fill="#1E2A35"/>
+  <text x="120" y="158" font-size="14" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#9FF59A" text-anchor="middle">$ vi file.txt</text>
+  <line x1="216" y1="152" x2="266" y2="152" stroke="#5A6B7B" stroke-width="1.8" marker-end="url(#viA)"/>
+
+  <!-- Командный режим (центральный, акцентный) -->
+  <rect x="270" y="120" width="220" height="64" rx="12" fill="#2E9E8F"/>
+  <text x="380" y="158" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Командный режим</text>
+
+  <!-- Режим вставки (справа) -->
+  <rect x="540" y="120" width="200" height="64" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="640" y="158" font-size="16" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Режим вставки</text>
+
+  <!-- Last line (внизу) -->
+  <rect x="270" y="280" width="220" height="64" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="380" y="318" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Режим последней строки</text>
+
+  <!-- Стрелка командный → вставки -->
+  <line x1="496" y1="146" x2="534" y2="146" stroke="#5A6B7B" stroke-width="1.8" marker-end="url(#viA)"/>
+  <text x="515" y="135" font-size="12" font-weight="bold" fill="#2E9E8F" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">i o a</text>
+
+  <!-- Стрелка вставки → командный -->
+  <line x1="534" y1="166" x2="496" y2="166" stroke="#5A6B7B" stroke-width="1.8" marker-end="url(#viA)"/>
+  <text x="515" y="182" font-size="12" font-weight="bold" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">Esc</text>
+
+  <!-- Стрелка командный → last line -->
+  <line x1="365" y1="190" x2="365" y2="274" stroke="#5A6B7B" stroke-width="1.8" marker-end="url(#viA)"/>
+  <text x="350" y="234" font-size="12" font-weight="bold" fill="#2E9E8F" text-anchor="end" font-family="DejaVu Sans Mono, Consolas, monospace">:</text>
+
+  <!-- Стрелка last line → командный -->
+  <line x1="395" y1="274" x2="395" y2="190" stroke="#5A6B7B" stroke-width="1.8" marker-end="url(#viA)"/>
+  <text x="410" y="234" font-size="12" font-weight="bold" fill="#5A6B7B" text-anchor="start" font-family="DejaVu Sans Mono, Consolas, monospace">Esc</text>
+
+  <!-- Пояснения к режимам -->
+  <text x="640" y="208" font-size="11" fill="#9AA3AD" text-anchor="middle">правка, добавление, удаление текста</text>
+  <text x="380" y="368" font-size="11" fill="#9AA3AD" text-anchor="middle">сохранение, отмена изменений, выход</text>
+</svg>

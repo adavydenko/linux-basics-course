@@ -1,0 +1,52 @@
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="700" height="480" fill="#FFFFFF"/>
+
+  <!-- Заголовок -->
+  <text x="350" y="48" font-size="24" font-weight="700" fill="#1A2B3C" text-anchor="middle">LVM<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   менеджер логических томов</tspan></text>
+
+  <!-- Подпись верхнего слоя -->
+  <text x="350" y="108" font-size="15" font-weight="bold" fill="#2E9E8F" text-anchor="middle">Логические тома (LV)</text>
+
+  <!-- Логические тома: имя + размер + точка монтирования -->
+  <rect x="125" y="125" width="130" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="190" y="153" font-size="17" font-weight="bold" fill="#1A2B3C" text-anchor="middle">VOL1</text>
+  <text x="190" y="175" font-size="12" fill="#5A6B7B" text-anchor="middle">5 ГБ</text>
+  <text x="190" y="200" font-size="12" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">/home</text>
+
+  <rect x="285" y="125" width="130" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="350" y="153" font-size="17" font-weight="bold" fill="#1A2B3C" text-anchor="middle">VOL2</text>
+  <text x="350" y="175" font-size="12" fill="#5A6B7B" text-anchor="middle">5 ГБ</text>
+  <text x="350" y="200" font-size="12" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">/var</text>
+
+  <rect x="445" y="125" width="130" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="510" y="153" font-size="17" font-weight="bold" fill="#1A2B3C" text-anchor="middle">VOL3</text>
+  <text x="510" y="175" font-size="12" fill="#5A6B7B" text-anchor="middle">5 ГБ</text>
+  <text x="510" y="200" font-size="12" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">/opt</text>
+
+  <!-- Сходящиеся соединители: все LV нарезаются из общего пула VG. Точка схождения лежит на границе региона. -->
+  <g stroke="#8A97A3" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <path d="M190,222 L350,275"/>
+    <path d="M350,222 L350,275"/>
+    <path d="M510,222 L350,275"/>
+  </g>
+
+  <!-- Регион: группа томов. Пунктирный контур отличает «группировку» от карточек-элементов. -->
+  <rect x="50" y="275" width="600" height="185" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="350" y="304" font-size="19" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Группа томов (VG)</text>
+  <text x="350" y="324" font-size="12" font-style="italic" fill="#5A6B7B" text-anchor="middle">общий пул, из которого нарезаются LV</text>
+
+  <!-- Подпись секции PV -->
+  <text x="350" y="350" font-size="14" font-weight="bold" fill="#2E9E8F" text-anchor="middle">Физические тома (PV)</text>
+
+  <!-- Физические тома -->
+  <g font-family="DejaVu Sans Mono, Consolas, monospace">
+    <rect x="95" y="362" width="150" height="80" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+    <text x="170" y="407" font-size="15" fill="#1A2B3C" text-anchor="middle">/dev/sda1</text>
+
+    <rect x="275" y="362" width="150" height="80" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+    <text x="350" y="407" font-size="15" fill="#1A2B3C" text-anchor="middle">/dev/sda2</text>
+
+    <rect x="455" y="362" width="150" height="80" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+    <text x="530" y="407" font-size="15" fill="#1A2B3C" text-anchor="middle">/dev/sdb1</text>
+  </g>
+</svg>

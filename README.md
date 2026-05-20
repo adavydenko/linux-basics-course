@@ -1,88 +1,168 @@
-# The Linux Basics Course
+# Основы Linux
 
-These are notes from the [Linux Basics Course](https://bit.ly/3gGnxm0) hosted on KodeKloud.
+Учебное пособие по базовой работе с Linux. Материал основан на конспектах курса [Linux Basics Course](https://bit.ly/3gGnxm0) от KodeKloud и адаптируется для русскоязычных студентов.
 
-# Table of Contents
+## Для кого этот курс
 
-- [01-Introduction](docs/01-Introduction)
+Курс рассчитан на студентов 2 курса факультета прикладной математики, которым нужно уверенно работать в Linux: запускать команды, ориентироваться в файловой системе, управлять пакетами, пользователями, правами доступа, сервисами, сетью и хранилищами.
 
-- [02-Working-With-Shell-Part-I](docs/02-Working-With-Shell-Part-I)
+После прохождения курса студент должен уметь:
 
-  - [01-Introduction-to-Shell](docs/02-Working-With-Shell-Part-I/01-Introduction-to-Shell.md)
-  - [02-Basic-Commands](docs/02-Working-With-Shell-Part-I/02-Basic-Commands.md)
-  - [03-Command-Line-Help](docs/02-Working-With-Shell-Part-I/03-Command-Line-Help.md)
-  - [04-Lab-Working-With-Shell](docs/02-Working-With-Shell-Part-I/04-lab-working-with-shell.md)
-  - [05-Bash-Shell](docs/02-Working-With-Shell-Part-I/05-Bash-Shell.md)
-  - [06-Lab-Linux-Bash-Shell](docs/02-Working-With-Shell-Part-I/06-Lab-Linux-Bash-Shell.md)
-  
-- [03-Linux-Core-Concepts](docs/03-Linux-Core-Concepts)
+- работать в командной строке без графического интерфейса;
+- читать справку по командам и самостоятельно разбираться с опциями;
+- выполнять типовые операции с файлами, каталогами, архивами и текстовыми данными;
+- понимать базовую структуру Linux: ядро, процессы, файловая система, пользователи, права;
+- устанавливать и обновлять пакеты;
+- подключаться к удалённым машинам по SSH;
+- диагностировать простые проблемы с сетью, сервисами и диском;
+- оформлять результат лабораторной работы так, чтобы его можно было проверить.
 
-  - [01-Bobs-First-Team-Meeting](docs/03-Linux-Core-Concepts/01-Bobs-first-team-meeting.md)
-  - [02-The-Linux-Kernel](docs/03-Linux-Core-Concepts/02-The-Linux-Kernel.md)
-  - [03-Working-With-Hardware](docs/03-Linux-Core-Concepts/03-Working-with-hardware.md)
-  - [04-Lab-Linux-Kernel](docs/03-Linux-Core-Concepts/04-Lab-Linux-Kernel.md)
-  - [05-Linux-Boot-Sequence](docs/03-Linux-Core-Concepts/05-Linux-Boot-Sequence.md)
-  - [06-Run-Levels](docs/03-Linux-Core-Concepts/06-Run-Levels.md)
-  - [07-File-Types](docs/03-Linux-Core-Concepts/07-File-Types.md)
-  - [08-Filesystem-Hierarchy](docs/03-Linux-Core-Concepts/08-Filesystem-Hierarchy.md)
-  - [09-Lab-Linux-RunLevels-Filesystem-Hierarchy](docs/03-Linux-Core-Concepts/09-Lab-Linux-RunLevels-Filesystem-Hierarchy.md)
+## Статус русской версии
 
+Русские материалы лежат рядом с оригиналами и имеют суффикс `.ru.md`.
 
-- [04-Package-Mangement](docs/04-Package-Mangement)
+Все исходные уроки переведены и стилистически переработаны в «пояснительно-практическом» ключе. Все диаграммы заменены русскоязычными SVG (с префиксом `ru_`). Англоязычные изображения остались только для пары к английским `*.md`.
 
-  - [01-Package-Management-Distribution](docs/04-Package-Mangement/01-Package-Management-Distribution.md)
-  - [02-RPM-and-YUM](docs/04-Package-Mangement/02-RPM-and-YUM.md)
-  - [03-Lab-RPM-and-YUM](docs/04-Package-Mangement/03-Lab-RPM-and-YUM.md)
-  - [04-DPKG-AND-APT](docs/04-Package-Mangement/04-DPKG-AND-APT.md)
-  - [05-APT-vs-APT-GET](docs/04-Package-Mangement/05-APT-vs-APT-GET.md)
-  - [06-Lab-DPKG-AND-APT](docs/04-Package-Mangement/06-Lab-DPKG-AND-APT.md)
+Добавлены академические приложения: глоссарий, источники, банк упражнений, методичка преподавателя, педагогический аппарат, приложение по регулярным выражениям. Содержательно расширены модули 06 (SUID/SGID/sticky/umask), 09 (таймеры systemd), 12 (функции, case, trap, here-doc, отладка), 13 (сигналы, pgrep/pkill), 17 (Netplan/NetworkManager), 18 (Dockerfile).
 
+Перед публикацией остаётся: финальная корректорская вычитка опечаток; проверка единообразия терминов в модулях 11-20; обновление лабораторных, если изменилась учебная среда.
 
-- [05-Working-With-Shell-Part-II](docs/05-Working-With-Shell-Part-II)
+## Сборка mdBook
 
-  - [01-Behind-Schedule(story)](docs/05-Working-With-Shell-Part-II/01-Behind-Schedule(story).md)
-  - [02-File-Compression-and-Archival](docs/05-Working-With-Shell-Part-II/02-File-Compression-and-Archival.md)
-  - [03-Searching-For-Files-and-Patterns](docs/05-Working-With-Shell-Part-II/03-Searching-for-files-and-patterns.md)
-  - [04-IO-Redirection](docs/05-Working-With-Shell-Part-II/04-IO-Redirection.md)
-  - [05-Lab-Working-With-Shell-Part-II](docs/05-Working-With-Shell-Part-II/05-Lab-Working-With-Shell-Part-II.md)
-  - [06-Vi-Editor](docs/05-Working-With-Shell-Part-II/06-Vi-Editor.md)
-  - [07-Lab-VI-Editor](docs/05-Working-With-Shell-Part-II/07-Lab-VI-Editor.md)
+HTML-версия пособия публикуется через mdBook. После включения GitHub Pages основная ссылка будет:
 
-- [06-Security-and-File-Permissions](docs/06-Security-and-File-Permissions)
+- [https://adavydenko.github.io/linux-basics-course/](https://adavydenko.github.io/linux-basics-course/)
 
-  - [01-The-Security-Incident(story)](docs/06-Security-and-File-Permissions/01-The-Security-Incident(story).md)
-  - [02-Linux-Accounts](docs/06-Security-and-File-Permissions/02-Linux-Accounts.md)
-  - [03-User-Management](docs/06-Security-and-File-Permissions/03-User-Management.md)
-  - [04-Access-Control-Files](docs/06-Security-and-File-Permissions/04-Access-Control-Files.md)
-  - [05-File-Permissions](docs/06-Security-and-File-Permissions/05-File-Permissions.md)
-  - [06-SSH-and-SCP](docs/06-Security-and-File-Permissions/06-SSH-and-SCP.md)
-  - [07-IPtables](docs/06-Security-and-File-Permissions/07-IPtables.md)
-  - [08-Cronjob](docs/06-Security-and-File-Permissions/08-Cronjob.md)
+PDF-версия собирается вместе с HTML и кладётся в стабильный путь внутри Pages:
 
-- [07-Networking](docs/07-Networking)
+- [https://adavydenko.github.io/linux-basics-course/assets/linux-basics-course.pdf](https://adavydenko.github.io/linux-basics-course/assets/linux-basics-course.pdf)
 
-  - [01-The-Network-Issue(story)](docs/07-Networking/01-The-Network-Issue(story).md)
-  - [02-DNS](docs/07-Networking/02-DNS.md)
-  - [03-Networking-Basics](docs/07-Networking/03-Networking-Basics.md)
-  - [04-Troubleshooting](docs/07-Networking/04-Troubleshooting.md)
+Локальная сборка выполняется через Docker:
 
-- [08-Storage-in-Linux](docs/08-Storage-in-Linux)
+```bash
+chmod +x scripts/build-mdbook.sh
+./scripts/build-mdbook.sh all
+```
 
-  - [01-Where's-my-Storage](docs/08-Storage-in-Linux/01-Where's-my-Storage.md)
-  - [02-Storage-Basics](docs/08-Storage-in-Linux/02-Storage-Basics.md)
-  - [03-File-System-in-Linux](docs/08-Storage-in-Linux/03-File-System-in-Linux.md)
-  - [04-DAS-NAS-and-SAN](docs/08-Storage-in-Linux/04-DAS-NAS-and-SAN.md)
-  - [05-LVM](docs/08-Storage-in-Linux/05-LVM.md)
-  - [06-Project-Status-Meeting](docs/08-Storage-in-Linux/06-Project-Status-Meeting.md)
+Результаты сборки:
 
-- [09-Service-management-with-SYSTEMD](docs/09-Service-management-with-SYSTEMD)
+- HTML: `docs/book/index.html`
+- PDF: `docs/dist/linux-basics-course.pdf`
 
-  - [01-Working-Overtime-Story](docs/09-Service-management-with-SYSTEMD/01-Working-Overtime-Story.md)
-  - [02-Creating-a-SYSTEMD-Service](docs/09-Service-management-with-SYSTEMD/02-Creating-a-SYSTEMD-Service.md)
-  - [03-SYSTEMD-Tools](docs/09-Service-management-with-SYSTEMD/03-SYSTEMD-Tools.md)
+Локальный предпросмотр:
 
-- [10-The-Client-Demonstration](docs/10-The-Client-Demonstration)
+```bash
+./scripts/serve-mdbook.sh
+```
 
-  - [01-Client-Demonstration-in-Jeopardy!(story)](docs/10-The-Client-Demonstration/01-Client-Demonstration-in-Jeopardy!(story).md)
-  - [02-Troubleshoot-the-Development-Environment](docs/10-The-Client-Demonstration/02-Troubleshoot-the-Development-Environment.md)
-  - [03-Finale(story)](docs/10-The-Client-Demonstration/03-Finale(story).md)
+После запуска откройте [http://localhost:8088/](http://localhost:8088/).
+
+## Правила перевода
+
+- Команды, параметры, пути, имена файлов и вывод терминала не переводятся.
+- При первом упоминании полезно давать английский термин в скобках: `оболочка (shell)`, `точка монтирования (mount point)`.
+- Дальше в тексте используется русский термин.
+- Заголовки должны быть понятными студенту, без лишнего капса.
+- Если изображение содержит английские подписи, рядом в тексте нужно дать русское объяснение.
+- Структуру русской версии желательно держать близкой к оригиналу, чтобы было проще сверять изменения.
+
+## Рекомендуемая последовательность изучения
+
+- [00. Настройка окружения для лабораторных работ](docs/00-Lab-Environment/01-Lab-Environment-Setup.ru.md)
+
+- [01. Введение](docs/01-Introduction/01-Introduction.ru.md)
+
+- [02. Работа с командной строкой, часть I](docs/02-Working-With-Shell-Part-I)
+  - [Введение в оболочку](docs/02-Working-With-Shell-Part-I/01-Introduction-to-Shell.ru.md)
+  - [Базовые команды Linux](docs/02-Working-With-Shell-Part-I/02-Basic-Commands.ru.md)
+  - [Справка в командной строке](docs/02-Working-With-Shell-Part-I/03-Command-Line-Help.ru.md)
+  - [Лабораторная работа: оболочка и базовые команды](docs/02-Working-With-Shell-Part-I/04-lab-working-with-shell.ru.md)
+  - [Оболочка Bash](docs/02-Working-With-Shell-Part-I/05-Bash-Shell.ru.md)
+  - [Лабораторная работа: Bash](docs/02-Working-With-Shell-Part-I/06-Lab-Linux-Bash-Shell.ru.md)
+
+- [03. Ключевые понятия Linux](docs/03-Linux-Core-Concepts)
+  - [Первая рабочая встреча Боба](docs/03-Linux-Core-Concepts/01-Bobs-first-team-meeting.ru.md)
+  - [Ядро Linux](docs/03-Linux-Core-Concepts/02-The-Linux-Kernel.ru.md)
+  - [Работа с оборудованием](docs/03-Linux-Core-Concepts/03-Working-with-hardware.ru.md)
+  - [Лабораторная работа: ядро Linux](docs/03-Linux-Core-Concepts/04-Lab-Linux-Kernel.ru.md)
+  - [Последовательность загрузки Linux](docs/03-Linux-Core-Concepts/05-Linux-Boot-Sequence.ru.md)
+  - [Уровни запуска и targets systemd](docs/03-Linux-Core-Concepts/06-Run-Levels.ru.md)
+  - [Типы файлов в Linux](docs/03-Linux-Core-Concepts/07-File-Types.ru.md)
+  - [Иерархия файловой системы](docs/03-Linux-Core-Concepts/08-Filesystem-Hierarchy.ru.md)
+  - [Лабораторная работа: уровни запуска и файловая система](docs/03-Linux-Core-Concepts/09-Lab-Linux-RunLevels-Filesystem-Hierarchy.ru.md)
+
+- [04. Управление пакетами](docs/04-Package-Mangement)
+  - [Дистрибутивы и пакетные менеджеры](docs/04-Package-Mangement/01-Package-Management-Distribution.ru.md)
+  - [RPM и YUM](docs/04-Package-Mangement/02-RPM-and-YUM.ru.md)
+  - [Лабораторная работа: RPM и YUM](docs/04-Package-Mangement/03-Lab-RPM-and-YUM.ru.md)
+  - [DPKG и APT](docs/04-Package-Mangement/04-DPKG-AND-APT.ru.md)
+  - [APT и APT-GET](docs/04-Package-Mangement/05-APT-vs-APT-GET.ru.md)
+  - [Лабораторная работа: DPKG и APT](docs/04-Package-Mangement/06-Lab-DPKG-AND-APT.ru.md)
+
+- [05. Работа с командной строкой, часть II](docs/05-Working-With-Shell-Part-II)
+  - [История: отставание от графика](<docs/05-Working-With-Shell-Part-II/01-Behind-Schedule(story).ru.md>)
+  - [Архивация и сжатие файлов](docs/05-Working-With-Shell-Part-II/02-File-Compression-and-Archival.ru.md)
+  - [Поиск файлов и шаблонов](docs/05-Working-With-Shell-Part-II/03-Searching-for-files-and-patterns.ru.md)
+  - [Перенаправление ввода-вывода](docs/05-Working-With-Shell-Part-II/04-IO-Redirection.ru.md)
+  - [Лабораторная работа: командная строка, часть II](docs/05-Working-With-Shell-Part-II/05-Lab-Working-With-Shell-Part-II.ru.md)
+  - [Редактор Vi](docs/05-Working-With-Shell-Part-II/06-Vi-Editor.ru.md)
+  - [Лабораторная работа: Vi](docs/05-Working-With-Shell-Part-II/07-Lab-VI-Editor.ru.md)
+
+- [06. Безопасность и права доступа](docs/06-Security-and-File-Permissions)
+  - [История: инцидент безопасности](<docs/06-Security-and-File-Permissions/01-The-Security-Incident(story).ru.md>)
+  - [Учётные записи Linux](docs/06-Security-and-File-Permissions/02-Linux-Accounts.ru.md)
+  - [Управление пользователями](docs/06-Security-and-File-Permissions/03-User-Management.ru.md)
+  - [Файлы управления доступом](docs/06-Security-and-File-Permissions/04-Access-Control-Files.ru.md)
+  - [Права доступа к файлам](docs/06-Security-and-File-Permissions/05-File-Permissions.ru.md)
+  - [SSH и SCP](docs/06-Security-and-File-Permissions/06-SSH-and-SCP.ru.md)
+  - [IPtables](docs/06-Security-and-File-Permissions/07-IPtables.ru.md)
+  - [Cron](docs/06-Security-and-File-Permissions/08-Cronjob.ru.md)
+
+- [07. Сети](docs/07-Networking)
+  - [История: сетевой инцидент](<docs/07-Networking/01-The-Network-Issue(story).ru.md>)
+  - [DNS](docs/07-Networking/02-DNS.ru.md)
+  - [Основы сети: коммутация и маршрутизация](docs/07-Networking/03-Networking-Basics.ru.md)
+  - [Диагностика сетевых проблем](docs/07-Networking/04-Troubleshooting.ru.md)
+
+- [08. Хранилища в Linux](docs/08-Storage-in-Linux)
+  - [Где находится моё хранилище?](docs/08-Storage-in-Linux/01-Wheres-my-Storage.ru.md)
+  - [Диски и разделы](docs/08-Storage-in-Linux/02-Storage-Basics.ru.md)
+  - [Файловые системы в Linux](docs/08-Storage-in-Linux/03-File-System-in-Linux.ru.md)
+  - [DAS, NAS и SAN](docs/08-Storage-in-Linux/04-DAS-NAS-and-SAN.ru.md)
+  - [LVM](docs/08-Storage-in-Linux/05-LVM.ru.md)
+  - [Статусная встреча проекта](docs/08-Storage-in-Linux/06-Project-Status-Meeting.ru.md)
+
+- [09. Управление сервисами с systemd](docs/09-Service-management-with-SYSTEMD)
+  - [История: работа сверхурочно](docs/09-Service-management-with-SYSTEMD/01-Working-Overtime-Story.ru.md)
+  - [Создание собственного systemd-сервиса](docs/09-Service-management-with-SYSTEMD/02-Creating-a-SYSTEMD-Service.ru.md)
+  - [Инструменты systemd](docs/09-Service-management-with-SYSTEMD/03-SYSTEMD-Tools.ru.md)
+  - [Таймеры systemd](docs/09-Service-management-with-SYSTEMD/04-SYSTEMD-Timers.ru.md)
+
+- [10. Демонстрация заказчику (сквозной кейс)](docs/10-The-Client-Demonstration)
+  - [История: демонстрация под угрозой](<docs/10-The-Client-Demonstration/01-Client-Demonstration-in-Jeopardy!(story).ru.md>)
+  - [Демонстрационный кейс по диагностике](docs/10-The-Client-Demonstration/02-Troubleshoot-the-Development-Environment.ru.md)
+  - [Финал истории](<docs/10-The-Client-Demonstration/03-Finale(story).ru.md>)
+
+- [11. Работа с текстовыми данными](docs/11-Text-Processing/01-Text-Processing.ru.md)
+- [12. Скрипты для оболочки](docs/12-Shell-Scripting/01-Shell-Scripting.ru.md)
+- [13. Процессы и ресурсы](docs/13-Processes-and-Resources/01-Processes-and-Resources.ru.md)
+- [14. Удалённая работа](docs/14-Remote-Work/01-Remote-Work.ru.md)
+- [15. Git из командной строки](docs/15-Git-from-Command-Line/01-Git-from-Command-Line.ru.md)
+- [16. Python из командной строки](docs/16-Python-from-Command-Line/01-Python-from-Command-Line.ru.md)
+- [17. Современная сеть в Linux](docs/17-Modern-Networking)
+  - [Современная сеть в Linux](docs/17-Modern-Networking/01-Modern-Networking.ru.md)
+  - [Постоянная сеть: Netplan и NetworkManager](docs/17-Modern-Networking/02-Netplan.ru.md)
+- [18. Контейнеры в Linux](docs/18-Linux-Containers/01-Linux-Containers.ru.md)
+- [19. Диагностика Linux](docs/19-Diagnostics/01-Diagnostics.ru.md)
+- [20. Итоговый проект](docs/20-Final-Project/01-Final-Project.ru.md)
+
+## Приложения
+
+- [A1. Глоссарий](docs/A1-Glossary/01-Glossary.ru.md) — краткие определения терминов, встречающихся в пособии.
+- [A2. Источники и рекомендуемая литература](docs/A2-Sources/01-Sources.ru.md) — открытые ресурсы для углублённого чтения.
+- [A3. Банк упражнений](docs/A3-Exercises/01-Exercises.ru.md) — задачи к каждому модулю четырёх типов: репродуктивные, аналитические, проектирование, отладка.
+- [A4. Педагогический аппарат](docs/A4-Pedagogy/01-Pedagogy.ru.md) — описание приёмов, встроенных в текст пособия.
+- [A5. Методичка преподавателя](docs/A5-Teacher-Guide/01-Teacher-Guide.ru.md) — семестровый план, рубрика оценивания, ключи к контрольным вопросам, чек-лист защиты.
+- [A6. Регулярные выражения](docs/A6-Appendix-Regex/01-Regular-Expressions.ru.md) — пререквизит к модулю 11.
+- [A7. Решения к банку упражнений](docs/A7-Solutions/01-Solutions.ru.md) — эталонные разборы 3–5 задач на модуль; документ для преподавателя.
+- [Шпаргалка по командам Linux](docs/21-Appendix-Cheat-Sheet/01-Command-Cheat-Sheet.ru.md) — карманный справочник.
