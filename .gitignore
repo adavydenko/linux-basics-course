@@ -4,3 +4,16 @@ docs/images/
 docs/hints.json
 docs/build-info.json
 docs/theme/build-info.js
+
+# OS / editor metadata
+.DS_Store
+.Ulysses-Settings.plist
+.obsidian/
+.ztr-directory
+
+# Internal planning notes (not part of the published manual)
+EDITORIAL_REVIEW.ru.md
+IMAGE_INVENTORY.ru.md
+IMAGE_STYLE_GUIDE.ru.md
+STYLE_REVIEW.ru.md
+WRITING_STYLE.ru.md
