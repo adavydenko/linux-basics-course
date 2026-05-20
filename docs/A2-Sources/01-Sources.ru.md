@@ -1,6 +1,57 @@
 # Источники и рекомендуемая литература
 
-Список открытых ресурсов, к которым стоит обращаться при изучении Linux. Все ссылки на момент составления пособия (2026 г.) ведут на бесплатные публичные материалы. Они не цитируются в основном тексте напрямую — это дополнительный круг чтения, если конкретная тема вас зацепила и хочется глубже.
+<div class="bibliography">
+
+Этот раздел собран в двух форматах. Сначала — **пронумерованная библиография**: компактный академический список, на который можно ссылаться по номеру (например, «подробнее см. [5]»). Затем — **аннотированное чтение**: те же и дополнительные источники с короткими комментариями, зачем их брать.
+
+## Библиография
+
+1. Ward B. *How Linux Works: What Every Superuser Should Know.* 3rd ed. — No Starch Press, 2021. — 384 p. — ISBN 978-1-71850-040-2.
+2. Shotts W. E. *The Linux Command Line: A Complete Introduction.* 2nd ed. — No Starch Press, 2019. — 504 p. — ISBN 978-1-59327-952-3. — Доступно онлайн: https://linuxcommand.org/tlcl.php.
+3. Nemeth E., Snyder G., Hein T. R., Whaley B., Mackin D. *UNIX and Linux System Administration Handbook.* 5th ed. — Addison-Wesley, 2017. — 1232 p. — ISBN 978-0-13-427755-4.
+4. Friedl J. E. F. *Mastering Regular Expressions.* 3rd ed. — O'Reilly Media, 2006. — 544 p. — ISBN 978-0-596-52812-6.
+5. Barrett D. J. *Linux Pocket Guide.* 4th ed. — O'Reilly Media, 2024. — 264 p. — ISBN 978-1-098-15796-6.
+6. Schroder C. *The Linux Cookbook.* 2nd ed. — No Starch Press, 2021. — 488 p. — ISBN 978-1-7185-0080-8.
+7. Newham C. *Learning the bash Shell.* 3rd ed. — O'Reilly Media, 2005. — 354 p. — ISBN 978-0-596-00965-6.
+8. Robbins A., Dougherty D. *sed & awk.* 2nd ed. — O'Reilly Media, 1997. — 432 p. — ISBN 978-1-56592-225-9.
+9. Linux man-pages project. — URL: https://man7.org/linux/man-pages/ (дата обращения: 20.05.2026).
+10. The Linux Kernel Documentation. — URL: https://www.kernel.org/doc/html/latest/ (дата обращения: 20.05.2026).
+11. Ubuntu Server Documentation. — URL: https://documentation.ubuntu.com/server/ (дата обращения: 20.05.2026).
+12. Red Hat Enterprise Linux Documentation. — URL: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux (дата обращения: 20.05.2026).
+13. Arch Wiki. — URL: https://wiki.archlinux.org/ (дата обращения: 20.05.2026).
+14. systemd. System and Service Manager. — URL: https://systemd.io/ (дата обращения: 20.05.2026).
+15. Mockapetris P. RFC 1034: Domain Names — Concepts and Facilities. — IETF, 1987. — URL: https://datatracker.ietf.org/doc/rfc1034/.
+16. Mockapetris P. RFC 1035: Domain Names — Implementation and Specification. — IETF, 1987. — URL: https://datatracker.ietf.org/doc/rfc1035/.
+17. Lonvick C., Ylonen T. RFC 4253: The Secure Shell (SSH) Transport Layer Protocol. — IETF, 2006. — URL: https://datatracker.ietf.org/doc/rfc4253/.
+18. Postel J. RFC 791: Internet Protocol. — IETF, 1981. — URL: https://datatracker.ietf.org/doc/rfc791/.
+19. Postel J. RFC 793: Transmission Control Protocol. — IETF, 1981. — URL: https://datatracker.ietf.org/doc/rfc793/.
+20. Deering S., Hinden R. RFC 8200: Internet Protocol, Version 6 (IPv6) Specification. — IETF, 2017. — URL: https://datatracker.ietf.org/doc/rfc8200/.
+21. Filesystem Hierarchy Standard, Version 3.0. — Linux Foundation, 2015. — URL: https://refspecs.linuxfoundation.org/fhs.shtml.
+22. The Open Group Base Specifications Issue 7, IEEE Std 1003.1. — URL: https://pubs.opengroup.org/onlinepubs/9699919799/ (дата обращения: 20.05.2026).
+23. iproute2. — URL: https://wiki.linuxfoundation.org/networking/iproute2 (дата обращения: 20.05.2026).
+24. nftables Wiki. — URL: https://wiki.nftables.org/ (дата обращения: 20.05.2026).
+25. OpenSSH Manual Pages. — URL: https://www.openssh.com/manual.html (дата обращения: 20.05.2026).
+26. GNU Bash Reference Manual. — URL: https://www.gnu.org/software/bash/manual/ (дата обращения: 20.05.2026).
+27. GNU Coreutils Manual. — URL: https://www.gnu.org/software/coreutils/manual/ (дата обращения: 20.05.2026).
+28. Docker Documentation. — URL: https://docs.docker.com/ (дата обращения: 20.05.2026).
+29. Chacon S., Straub B. *Pro Git.* 2nd ed. — Apress, 2014. — 458 p. — ISBN 978-1-4842-0077-3. — Русский перевод: https://git-scm.com/book/ru/v2.
+30. Python venv documentation. — URL: https://docs.python.org/3/library/venv.html (дата обращения: 20.05.2026).
+31. Mozilla. OpenSSH Configuration Guidelines. — URL: https://infosec.mozilla.org/guidelines/openssh (дата обращения: 20.05.2026).
+32. CIS Benchmarks for Linux. — URL: https://www.cisecurity.org/cis-benchmarks/ (дата обращения: 20.05.2026).
+
+## Где какой источник пригодится по ходу курса
+
+Чтобы не приходилось каждый раз перечитывать всю библиографию, ниже указано, какие источники наиболее полезны к каким частям пособия.
+
+- **Часть I (основы, оболочка, пакеты):** [1], [2], [9], [11], [13], [26], [27].
+- **Часть II (пользователи, права, сети):** [3], [17], [25], [31].
+- **Часть III (хранилища, systemd):** [3], [13], [14], [21].
+- **Часть IV (автоматизация, скрипты, Git, Python):** [2], [7], [8], [29], [30].
+- **Часть V (современная сеть, контейнеры, диагностика):** [13], [14], [23], [24], [28].
+- **Приложение по регулярным выражениям:** [4], [22], [27].
+- **Безопасность (сквозная тема):** [25], [31], [32].
+
+</div>
 
 ## Документация в самой системе
 
