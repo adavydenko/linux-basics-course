@@ -50,6 +50,19 @@ build_html() {
   mdbook build .
 }
 
+postprocess_print_html() {
+  # Доводка print.html до печатной формы (см. scripts/postprocess-print-html.py):
+  # пометить языковой переключатель, обернуть истории-мостики и т.д.
+  local script="../scripts/postprocess-print-html.py"
+  if [[ -f "$script" ]]; then
+    if command -v python3 >/dev/null 2>&1; then
+      python3 "$script" book/print.html || true
+    else
+      echo "postprocess: python3 не найден, пропускаю доводку print.html" >&2
+    fi
+  fi
+}
+
 build_pdf() {
   mkdir -p dist book/assets
 
@@ -57,6 +70,8 @@ build_pdf() {
     echo "book/print.html not found. Run 'build-mdbook html' first, or use 'build-mdbook all'." >&2
     exit 1
   fi
+
+  postprocess_print_html
 
   weasyprint book/print.html "dist/${PDF_FILE}"
   cp "dist/${PDF_FILE}" "book/assets/${PDF_FILE}"
