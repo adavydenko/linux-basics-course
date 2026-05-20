@@ -1,0 +1,11 @@
+@media print {
+  .chapter {
+    break-after: auto;
+  }
+
+  pre,
+  blockquote,
+  table {
+    break-inside: avoid;
+  }
+}

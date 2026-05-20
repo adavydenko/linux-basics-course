@@ -1,0 +1,53 @@
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="280" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-size="22" font-weight="700" fill="#1A2B3C">Анатомия прав доступа<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   первый столбец <tspan font-family="DejaVu Sans Mono, Consolas, monospace">ls -l</tspan></tspan></text>
+
+  <!-- Строка прав: один символ типа + 3 тройки -->
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="36" font-weight="bold" fill="#1A2B3C" text-anchor="middle">
+    <text x="120" y="135">-</text>
+    <text x="220" y="135">r</text>
+    <text x="252" y="135">w</text>
+    <text x="284" y="135">x</text>
+    <text x="380" y="135">r</text>
+    <text x="412" y="135">w</text>
+    <text x="444" y="135">-</text>
+    <text x="540" y="135">r</text>
+    <text x="572" y="135">-</text>
+    <text x="604" y="135">-</text>
+  </g>
+
+  <!-- Группы (рамки + подписи) -->
+  <rect x="100" y="105" width="40" height="40" rx="6" fill="none" stroke="#5A6B7B" stroke-width="1.5"/>
+  <text x="120" y="170" font-size="12" font-weight="bold" fill="#1A2B3C" text-anchor="middle">тип</text>
+
+  <rect x="200" y="105" width="104" height="40" rx="6" fill="none" stroke="#2E9E8F" stroke-width="2"/>
+  <text x="252" y="170" font-size="12" font-weight="bold" fill="#2E9E8F" text-anchor="middle">владелец (u)</text>
+
+  <rect x="360" y="105" width="104" height="40" rx="6" fill="none" stroke="#2E9E8F" stroke-width="2"/>
+  <text x="412" y="170" font-size="12" font-weight="bold" fill="#2E9E8F" text-anchor="middle">группа (g)</text>
+
+  <rect x="520" y="105" width="104" height="40" rx="6" fill="none" stroke="#2E9E8F" stroke-width="2"/>
+  <text x="572" y="170" font-size="12" font-weight="bold" fill="#2E9E8F" text-anchor="middle">остальные (o)</text>
+
+  <!-- Таблица: бит, назначение, число -->
+  <g>
+    <rect x="160" y="200" width="400" height="32" rx="6" fill="#2E9E8F"/>
+    <text x="200" y="221" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Буква</text>
+    <text x="360" y="221" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Назначение</text>
+    <text x="520" y="221" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Число</text>
+
+    <rect x="160" y="232" width="400" height="14" rx="0" fill="#F8F9FA"/>
+    <text x="200" y="244" font-size="13" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#1A2B3C" text-anchor="middle">r</text>
+    <text x="360" y="244" font-size="13" fill="#1A2B3C" text-anchor="middle">чтение</text>
+    <text x="520" y="244" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">4</text>
+
+    <text x="200" y="260" font-size="13" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#1A2B3C" text-anchor="middle">w</text>
+    <text x="360" y="260" font-size="13" fill="#1A2B3C" text-anchor="middle">запись</text>
+    <text x="520" y="260" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">2</text>
+
+    <text x="200" y="276" font-size="13" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#1A2B3C" text-anchor="middle">x</text>
+    <text x="360" y="276" font-size="13" fill="#1A2B3C" text-anchor="middle">выполнение</text>
+    <text x="520" y="276" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">1</text>
+  </g>
+</svg>

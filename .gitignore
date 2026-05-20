@@ -1,0 +1,6 @@
+docs/book/
+docs/dist/
+docs/images/
+docs/hints.json
+docs/build-info.json
+docs/theme/build-info.js

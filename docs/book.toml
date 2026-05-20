@@ -1,0 +1,16 @@
+[book]
+title = "Основы Linux"
+language = "ru"
+src = "."
+version = "0.1.0"
+
+[output.html]
+git-repository-url = "https://github.com/adavydenko/linux-basics-course"
+git-repository-icon = "fa-github"
+additional-css = ["./theme/print-extras.css"]
+additional-js = ["./theme/build-info.js"]
+
+# Встроенная сборка одной HTML-страницы со всеми главами (book/print.html),
+# которую затем weasyprint конвертирует в PDF.
+[output.html.print]
+enable = true

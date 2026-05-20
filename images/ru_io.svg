@@ -1,0 +1,23 @@
+<svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="220" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-size="22" font-weight="700" fill="#1A2B3C">Три стандартных потока<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   ввод, вывод и ошибки</tspan></text>
+
+  <!-- STDIN -->
+  <rect x="40" y="90" width="200" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="140" y="124" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Стандартный ввод</text>
+  <text x="140" y="146" font-size="12" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#5A6B7B" text-anchor="middle">stdin · дескриптор 0</text>
+  <text x="140" y="168" font-size="11" fill="#9AA3AD" text-anchor="middle">входит в команду</text>
+
+  <!-- STDOUT -->
+  <rect x="260" y="90" width="200" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="360" y="124" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Стандартный вывод</text>
+  <text x="360" y="146" font-size="12" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#5A6B7B" text-anchor="middle">stdout · дескриптор 1</text>
+  <text x="360" y="168" font-size="11" fill="#9AA3AD" text-anchor="middle">выходит из команды</text>
+
+  <!-- STDERR -->
+  <rect x="480" y="90" width="200" height="92" rx="12" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <text x="580" y="124" font-size="15" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Стандартные ошибки</text>
+  <text x="580" y="146" font-size="12" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#5A6B7B" text-anchor="middle">stderr · дескриптор 2</text>
+  <text x="580" y="168" font-size="11" fill="#9AA3AD" text-anchor="middle">сообщения об ошибках</text>
+</svg>

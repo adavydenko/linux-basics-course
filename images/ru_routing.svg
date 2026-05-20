@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="800" height="280" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-size="22" font-weight="700" fill="#1A2B3C" text-anchor="middle">Маршрутизация<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   связь между двумя сетями</tspan></text>
+
+  <!-- Сеть 1 -->
+  <rect x="40" y="90" width="280" height="160" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="180" y="118" font-size="14" font-weight="bold" fill="#1A2B3C" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.1.0/24</text>
+
+  <rect x="70" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="120" y="160" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">A</text>
+  <text x="120" y="178" font-size="11" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.1.10</text>
+
+  <rect x="190" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="240" y="160" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">B</text>
+  <text x="240" y="178" font-size="11" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.1.11</text>
+
+  <!-- Сеть 2 -->
+  <rect x="480" y="90" width="280" height="160" rx="16" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="620" y="118" font-size="14" font-weight="bold" fill="#1A2B3C" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.2.0/24</text>
+
+  <rect x="510" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="560" y="160" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">C</text>
+  <text x="560" y="178" font-size="11" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.2.10</text>
+
+  <rect x="630" y="140" width="100" height="50" rx="10" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.2"/>
+  <text x="680" y="160" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">D</text>
+  <text x="680" y="178" font-size="11" fill="#5A6B7B" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.2.11</text>
+
+  <!-- Маршрутизатор -->
+  <rect x="340" y="140" width="120" height="76" rx="12" fill="#2E9E8F"/>
+  <text x="400" y="166" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Маршрутизатор</text>
+  <text x="400" y="186" font-size="11" fill="#FFFFFF" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.1.1</text>
+  <text x="400" y="202" font-size="11" fill="#FFFFFF" text-anchor="middle" font-family="DejaVu Sans Mono, Consolas, monospace">192.168.2.1</text>
+
+  <!-- Связи -->
+  <g stroke="#8A97A3" stroke-width="1.8" fill="none">
+    <line x1="324" y1="178" x2="336" y2="178"/>
+    <line x1="464" y1="178" x2="476" y2="178"/>
+  </g>
+</svg>

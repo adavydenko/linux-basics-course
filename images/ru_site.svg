@@ -1,0 +1,33 @@
+<svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <rect width="720" height="240" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-size="22" font-weight="700" fill="#1A2B3C">Сервер недоступен<tspan fill="#9AA3AD" font-weight="400" font-size="14">   ·   что увидит Bob в браузере</tspan></text>
+
+  <!-- Клиент -->
+  <circle cx="160" cy="140" r="44" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <g transform="translate(140,120)" stroke="#2E9E8F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="20" cy="14" r="6"/>
+    <path d="M8,34 a12,12 0 0 1 24,0"/>
+  </g>
+  <text x="160" y="208" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Клиент Bob</text>
+  <text x="160" y="224" font-size="11" font-family="DejaVu Sans Mono, Consolas, monospace" fill="#5A6B7B" text-anchor="middle">http://caleston-repo-01</text>
+
+  <!-- Сломанная связь -->
+  <line x1="204" y1="140" x2="516" y2="140" stroke="#8A97A3" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <circle cx="360" cy="140" r="18" fill="#FFFFFF" stroke="#C7D0D8" stroke-width="1.5"/>
+  <g stroke="#5A6B7B" stroke-width="3" stroke-linecap="round">
+    <line x1="349" y1="129" x2="371" y2="151"/>
+    <line x1="371" y1="129" x2="349" y2="151"/>
+  </g>
+  <text x="360" y="190" font-size="12" font-weight="bold" fill="#1A2B3C" text-anchor="middle">сервер не отвечает</text>
+
+  <!-- Сервер -->
+  <circle cx="560" cy="140" r="44" fill="#ECF6F4" stroke="#2E9E8F" stroke-width="1.5"/>
+  <g transform="translate(540,120)" stroke="#2E9E8F" stroke-width="1.8" fill="none" stroke-linejoin="round">
+    <rect x="6" y="6" width="28" height="9" rx="1.5"/>
+    <rect x="6" y="19" width="28" height="9" rx="1.5"/>
+    <circle cx="10" cy="10.5" r="1" fill="#2E9E8F"/>
+    <circle cx="10" cy="23.5" r="1" fill="#2E9E8F"/>
+  </g>
+  <text x="560" y="208" font-size="13" font-weight="bold" fill="#1A2B3C" text-anchor="middle">Сервер репозитория</text>
+</svg>

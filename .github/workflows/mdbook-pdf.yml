@@ -1,0 +1,28 @@
+name: mdBook PDF
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pdf:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build HTML and PDF
+        run: |
+          chmod +x scripts/build-mdbook.sh
+          BUILD_VERSION_PREFIX=updated BUILD_COMMIT="${GITHUB_SHA::7}" ./scripts/build-mdbook.sh all
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-basics-course-pdf
+          path: docs/dist/linux-basics-course.pdf
