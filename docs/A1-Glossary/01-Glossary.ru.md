@@ -352,7 +352,7 @@
 
 **`curl`** — утилита для HTTP/HTTPS-запросов из командной строки.
 
-**FHS (Filesystem Hierarchy Standard)** — стандарт стандартного назначения каталогов корня в Linux (`/etc`, `/usr`, `/var`, …).
+**FHS (Filesystem Hierarchy Standard)** — стандарт назначения каталогов корня в Linux (`/etc`, `/usr`, `/var`, …).
 
 **GECOS** — пятое поле в `/etc/passwd`, традиционно для имени пользователя и контактной информации.
 
