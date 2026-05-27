@@ -7,8 +7,8 @@ version = "0.1.0"
 [output.html]
 git-repository-url = "https://github.com/adavydenko/linux-basics-course"
 git-repository-icon = "fa-github"
-additional-css = ["./theme/print-extras.css"]
-additional-js = ["./theme/build-info.js"]
+additional-css = ["./theme/print-extras.css", "./theme/pdf-download.css"]
+additional-js = ["./theme/build-info.js", "./theme/pdf-download.js"]
 
 # Встроенная сборка одной HTML-страницы со всеми главами (book/print.html),
 # которую затем weasyprint конвертирует в PDF.

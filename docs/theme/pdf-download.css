@@ -1,0 +1,12 @@
+#pdf-download-link {
+  display: inline-block;
+}
+
+#pdf-download-button {
+  color: inherit;
+}
+
+#pdf-download-link:hover #pdf-download-button,
+#pdf-download-link:focus #pdf-download-button {
+  color: #d04437;
+}
